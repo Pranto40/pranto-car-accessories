@@ -11,7 +11,7 @@ const Navbar = ({children}) => {
         <div className="drawer drawer-end">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" /> 
         <div className="drawer-content flex flex-col">
-          <div className="w-full px-[7%] navbar fixed top-0 z-50 bg-slate-500 lg:px-20">
+          <div className="w-full lg:px-[7%] navbar fixed top-0 z-50 " style={{background: "#ffd54c"}}>
           <div className="flex-1 px-2 mx-2">Pranto - Car Accessories</div>
           <div className="flex-none lg:hidden">
               <label htmlFor="my-drawer-3" className="btn btn-square btn-ghost">

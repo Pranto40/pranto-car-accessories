@@ -6,6 +6,8 @@ import Navbar from "./Pages/Shared/Navbar";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SignUp from "./Pages/Login/SignUp";
+import Purchase from "./Pages/Home/Purchase";
+import RequireAuth from "./Pages/Login/RequireAuth";
 
 
 
@@ -16,6 +18,11 @@ function App() {
         <Route path="/" element={<Home></Home>}>Home</Route>
         <Route path="/login" element={<Login />}>Home</Route>
         <Route path="/signUP" element={<SignUp />}>Home</Route>
+        <Route path="/purchase/:id" element={
+          <RequireAuth>
+              <Purchase />
+          </RequireAuth>
+        } />
         <Route path="*" element={<NotFound />}>Home</Route>
       </Routes>
       <ToastContainer />

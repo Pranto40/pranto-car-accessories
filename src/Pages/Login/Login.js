@@ -1,10 +1,10 @@
 import React from 'react';
-import { useAuthState, useSendPasswordResetEmail, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import Loading from '../Shared/Loading';
 
 const Login = () => {
@@ -14,8 +14,7 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    const [datileUser, datileUserLoading] = useAuthState(auth);
-    console.log(datileUser.email);
+    // const [datileUser, datileUserLoading] = useAuthState(auth);
 
     const [
         signInWithEmailAndPassword,
@@ -23,7 +22,7 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
-    const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+    // const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     const onSubmit = data => {
         console.log(data)
@@ -39,15 +38,15 @@ const Login = () => {
         loginError= <span className='text-red-500 block mb-2'>{error?.message || googleError?.message}</span>
     }
     
-    if (loading || googleLoading || datileUserLoading) {
+    if (loading || googleLoading) {
         return <Loading />
     }
 
     const handlePasswordReset = async () => {
-        if (!datileUser.email) {
-            await sendPasswordResetEmail(datileUser.email);
-            toast('Email Sent')
-        }
+        // if (!datileUser.email) {
+        //     await sendPasswordResetEmail(datileUser.email);
+        //     toast('Email Sent')
+        // }
     }
     
     return (
@@ -106,7 +105,7 @@ const Login = () => {
                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                     </label>
                     </div>
-                    <button onClick={handlePasswordReset} class="btn btn-link lowercase">forget password</button>
+                    <button onClick={handlePasswordReset} className="btn btn-link lowercase">forget password</button>
                     {loginError}
                     <input className='btn w-full text-white' value="Login" type="submit" />
                 </form>

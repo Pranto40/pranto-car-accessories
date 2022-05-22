@@ -6,6 +6,7 @@ const Navbar = ({children}) => {
     const menuItem = <>
     <li><NavLink className='rounded-lg' to="/">Home</NavLink></li>
     <li><NavLink className='rounded-lg' to="/about">About</NavLink></li>
+    <li><NavLink className='rounded-lg' to="/login">Login</NavLink></li>
   </>
     return (
         <div className="drawer drawer-end">

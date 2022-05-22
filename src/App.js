@@ -5,6 +5,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import Navbar from "./Pages/Shared/Navbar";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SignUp from "./Pages/Login/SignUp";
 
 
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}>Home</Route>
         <Route path="/login" element={<Login />}>Home</Route>
+        <Route path="/signUP" element={<SignUp />}>Home</Route>
         <Route path="*" element={<NotFound />}>Home</Route>
       </Routes>
       <ToastContainer />

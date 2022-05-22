@@ -1,6 +1,57 @@
 [
-    {
-        "name": "",
+    {   
+        "id": 1,
+        "name": "Brake parts",
+        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
+        "description": "",
+        "availableQuantity": "",
+        "quantity": "",
+        "price": 20
+    },
+    {   
+        "id": 2,
+        "name": "Brake parts",
+        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
+        "description": "",
+        "availableQuantity": "",
+        "quantity": "",
+        "price": 20
+    },
+    {   
+        "id": 3,
+        "name": "Brake parts",
+        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
+        "description": "",
+        "availableQuantity": "",
+        "quantity": "",
+        "price": 20
+    },
+    {   
+        "id": 4,
+        "name": "Brake parts",
+        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
+        "description": "",
+        "availableQuantity": "",
+        "quantity": "",
+        "price": 20
+    },
+    {   
+        "id": 5,
+        "name": "Brake parts",
+        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
+        "description": "",
+        "availableQuantity": "",
+        "quantity": "",
+        "price": 20
+    },
+    {   
+        "id": 6,
+        "name": "Brake parts",
+        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
+        "description": "",
+        "availableQuantity": "",
+        "quantity": "",
         "price": 20
     }
+    
 ]

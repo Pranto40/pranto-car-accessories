@@ -7,7 +7,7 @@ const ReviewsDetails = ({customerName, comments}) => {
                 <div class="card-body">
                 <div class="avatar text-center">
                 <div class="w-24 rounded-full">
-                    <img src="https://api.lorem.space/image/face?hash=92310" />
+                    <img src="https://api.lorem.space/image/face?hash=92310" alt='' />
                 </div>
                 </div>
                 <h2 class="card-title">{customerName}</h2>

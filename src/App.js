@@ -12,6 +12,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard";
 import MyOrders from "./Pages/Dashboard/MyOrders";
 import AddReview from "./Pages/Dashboard/AddReview";
 import MyProfile from "./Pages/Dashboard/MyProfile";
+import Users from "./Pages/Dashboard/Users";
 
 
 
@@ -35,8 +36,9 @@ function App() {
           <Route index element={<MyOrders />}></Route>
           <Route path="addReview" element={<AddReview />}></Route>
           <Route path="myProfile" element={<MyProfile />}></Route>
+          <Route path="users" element={<Users />}></Route>
         </Route>
-        <Route path="*" element={<NotFound />}>Home</Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <ToastContainer />
     </Navbar>

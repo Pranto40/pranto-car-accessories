@@ -4,7 +4,7 @@ import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import Loading from '../Shared/Loading';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { sendEmailVerification } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import useToken from '../Hooks/useToken';
@@ -22,7 +22,9 @@ const SignUp = () => {
       
       const [token] = useToken(user || googleUser);
 
-      const navigate = useNavigate();
+      let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password)
@@ -32,7 +34,7 @@ const SignUp = () => {
     };
 
     if (token) {
-      navigate('/dashboard')
+      navigate(from, { replace: true })
     }
 
     let loginError;

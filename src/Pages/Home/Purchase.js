@@ -36,6 +36,7 @@ const Purchase = () => {
             productName: purchase.name,
             user: user.displayName,
             userEmail: user.email,
+            price: purchase.price,
             quantity: event.target.quantity.value,
             phone: event.target.phone.value,
         }

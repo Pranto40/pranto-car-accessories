@@ -3,7 +3,7 @@ import Loading from '../Shared/Loading';
 import Tools from './Tools';
 
 const Tool = () => {
-    const url = "product.json";
+    const url = "http://localhost:5000/tools";
     const [isLoading, setIsLoading] = useState(true);
     const [tools, setTools] = useState([]);
     const fetchData = async (url) => {

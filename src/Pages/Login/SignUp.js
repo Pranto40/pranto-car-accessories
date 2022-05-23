@@ -7,6 +7,7 @@ import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { sendEmailVerification } from 'firebase/auth';
 import { toast } from 'react-toastify';
+import useToken from '../Hooks/useToken';
 
 const SignUp = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
@@ -18,14 +19,21 @@ const SignUp = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+      
+      const [token] = useToken(user || googleUser);
+
       const navigate = useNavigate();
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password)
         await updateProfile({ displayName: data.name});
         verifyEmail();
-        navigate('/')
+        
     };
+
+    if (token) {
+      navigate('/dashboard')
+    }
 
     let loginError;
     if (error || googleError || updateError) {

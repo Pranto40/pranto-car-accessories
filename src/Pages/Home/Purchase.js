@@ -8,7 +8,7 @@ import Loading from '../Shared/Loading';
 const Purchase = () => {
     const [user] = useAuthState(auth);
     const {id} = useParams()
-    const url = `http://localhost:5000/tools/${id}`
+    const url = `https://desolate-journey-84026.herokuapp.com/tools/${id}`
 
     const [isLoading, setIsLoading] = useState(true);
     const [purchase, setPurchase] = useState([])
@@ -41,7 +41,7 @@ const Purchase = () => {
             quantity: event.target.quantity.value,
             phone: event.target.phone.value,
         }
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://desolate-journey-84026.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -11,7 +11,7 @@ const CheckoutForm = ({order}) => {
     const [clientSecret, setClientSecret] = useState('')
     const {price, user, userEmail, _id} = order;
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://desolate-journey-84026.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -70,7 +70,7 @@ const CheckoutForm = ({order}) => {
                     order: _id,
                     transactionId: paymentIntent.id
                 }
-                fetch(`http://localhost:5000/purchase/${_id}`, {
+                fetch(`https://desolate-journey-84026.herokuapp.com/purchase/${_id}`, {
                     method: 'PATCH',
                     headers: {
                         'content-type': 'application/json',

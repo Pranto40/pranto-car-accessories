@@ -3,7 +3,7 @@ import Loading from '../Shared/Loading';
 import Tools from './Tools';
 
 const Tool = () => {
-    const url = "http://localhost:5000/tools";
+    const url = "https://desolate-journey-84026.herokuapp.com/tools";
     const [isLoading, setIsLoading] = useState(true);
     const [tools, setTools] = useState([]);
     const fetchData = async (url) => {

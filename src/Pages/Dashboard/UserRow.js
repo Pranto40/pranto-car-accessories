@@ -4,10 +4,10 @@ import { Navigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
-const UserRow = ({user, refetch}) => {
-    const {email, role} = user;
+const UserRow = ({user, refetch, index}) => {
+    const {email, role, _id} = user;
     const makeAdmin = () => {
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://desolate-journey-84026.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,12 +28,25 @@ const UserRow = ({user, refetch}) => {
            }
         })
     }
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure? This item delete');
+        if(proceed) {
+          const url = `https://desolate-journey-84026.herokuapp.com/user/admin/${id}`;
+          fetch(url, {
+            method: 'DELETE',
+          })
+          .then(res => res.json())
+          .then(data => {
+          })
+        }
+      }
     return (
         <tr>
-            <th>1</th>
+            <th>{index + 1}</th>
             <td>{email}</td>
             <td>{role !== 'admin' &&<button onClick={makeAdmin} class="btn btn-sm">Make Admin</button>}</td>
-            <td><button class="btn btn-sm">Remove User</button></td>
+            <td><button onClick={() =>handleDelete (_id)} class="btn btn-sm">Remove User</button></td>
         </tr>
     );
 };

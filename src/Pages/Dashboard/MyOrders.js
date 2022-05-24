@@ -11,7 +11,7 @@ const MyOrders = () => {
     const navigate = useNavigate()
     useEffect(() => {
         if(user) {
-            fetch(`http://localhost:5000/purchase?userEmail=${user.email}`, {
+            fetch(`https://desolate-journey-84026.herokuapp.com/purchase?userEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -32,6 +32,21 @@ const MyOrders = () => {
         }
     }, [user])
 
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure? This item delete');
+        if(proceed) {
+          const url = `https://desolate-journey-84026.herokuapp.com/purchase/${id}`;
+          fetch(url, {
+            method: 'DELETE',
+          })
+          .then(res => res.json())
+          .then(data => {
+            const remaining = orders.filter(product => product._id !== id);
+            setOrders(remaining)
+          })
+        }
+      }
+
     return (
         <div>
            <h1>My Orders: {orders.length}</h1>
@@ -45,6 +60,7 @@ const MyOrders = () => {
                     <th>Quentity</th>
                     <th>Price</th>
                     <th>Payment</th>
+                    <th>Remove Order</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -59,6 +75,11 @@ const MyOrders = () => {
                                {order.paid && <div>
                                    <p><span className='text-success'>Paid</span></p>
                                 </div>}</td>
+                                <td>{!order.paid && <button onClick={() =>handleDelete (order._id)} className='btn btn-sm'>delete</button>}
+                                {order.paid && <div>
+                                    <button disabled className='btn btn-sm'>delete</button>
+                                </div>}
+                                </td>
                         </tr>)
                     }
                 </tbody>

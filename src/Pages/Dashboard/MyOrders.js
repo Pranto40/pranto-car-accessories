@@ -31,7 +31,6 @@ const MyOrders = () => {
             })
         }
     }, [user])
-
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? This item delete');
         if(proceed) {
@@ -74,6 +73,7 @@ const MyOrders = () => {
                             <td>{!order.paid && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm'>pay</button></Link>}
                                {order.paid && <div>
                                    <p><span className='text-success'>Paid</span></p>
+                                   <p>Transaction Id: <span className='text-success'>{order.transactionId}</span></p>
                                 </div>}</td>
                                 <td>{!order.paid && <button onClick={() =>handleDelete (order._id)} className='btn btn-sm'>delete</button>}
                                 {order.paid && <div>

@@ -7,7 +7,7 @@ const Banner = () => {
             <div className="hero-content flex-col lg:flex-row">
                 <div className='flex-1'>
                 <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
-                <p className="py-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+                <p className="py-6">We make different types of car products. You can get all the parts of the car here. You can order many kinds of parts at once if you want. You can also visit our web site to get more services from us.</p>
                 <button className="btn text-white font-bold">GET STARTED</button>
                 </div>
                 <div className='flex-1'>

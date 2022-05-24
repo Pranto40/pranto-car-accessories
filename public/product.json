@@ -2,56 +2,56 @@
     {   
         "_id": 1,
         "name": "Brake parts",
-        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
-        "description": "",
-        "availableQuantity": "",
-        "quantity": "",
-        "price": 20
+        "image": "https://i.ibb.co/Cn8SsXc/brake.webp",
+        "description": "We have two types of car Brake parts. This product can be used for many days, you can book if you want.",
+        "availableQuantity": "3200",
+        "quantity": "210",
+        "price": 150
     },
     {   
         "_id": 2,
-        "name": "Brake parts",
-        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
-        "description": "",
-        "availableQuantity": "",
-        "quantity": "",
-        "price": 20
+        "name": "Body Parts",
+        "image": "https://i.ibb.co/b2BPLk8/body-parts.webp",
+        "description": "We have three types of car bodies. This product can be used for many days, you can book if you want.",
+        "availableQuantity": "4256",
+        "quantity": "330",
+        "price": 199
     },
     {   
         "_id": 3,
-        "name": "Brake parts",
-        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
-        "description": "",
-        "availableQuantity": "",
-        "quantity": "",
-        "price": 20
+        "name": "Turbo Systems",
+        "image": "https://i.ibb.co/6bMQPkf/turbo-systems.webp",
+        "description": "We have one types of car Turbo Systems. This product can be used for many days, you can book if you want.",
+        "availableQuantity": "7562",
+        "quantity": "352",
+        "price": 130
     },
     {   
         "_id": 4,
-        "name": "Brake parts",
-        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
-        "description": "",
-        "availableQuantity": "",
-        "quantity": "",
-        "price": 20
+        "name": "Lighting",
+        "image": "https://i.ibb.co/cXmfp5K/lighting.webp",
+        "description": "We have four types of car Lighting. This product can be used for many days, you can book if you want.",
+        "availableQuantity": "8623",
+        "quantity": "425",
+        "price": 210
     },
     {   
         "_id": 5,
-        "name": "Brake parts",
-        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
-        "description": "",
-        "availableQuantity": "",
-        "quantity": "",
-        "price": 20
+        "name": "Moto Oil",
+        "image": "https://i.ibb.co/X3HrLrC/moto-oil.webp",
+        "description": "This product can be used for many days, you can book if you want.",
+        "availableQuantity": "2354",
+        "quantity": "263",
+        "price": 165
     },
     {   
         "_id": 6,
-        "name": "Brake parts",
-        "image": "https://i.ibb.co/DMrJs5d/tool1.webp",
-        "description": "",
-        "availableQuantity": "",
-        "quantity": "",
-        "price": 20
+        "name": "Wheels & Tires",
+        "image": "https://i.ibb.co/0FG8Zz1/wheel.webp",
+        "description": "We have five types of car Wheels & Tires. This product can be used for many days, you can book if you want.",
+        "availableQuantity": "5321",
+        "quantity": "420",
+        "price": 189
     }
     
 ]

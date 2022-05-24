@@ -14,9 +14,9 @@ const Tools = ({tool}) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">Name: {name}</h2>
-                <h3 className="card-title">Available quantity: {availableQuantity}</h3>
-                <h2 className="card-title">Quantity: {quantity}</h2>
-                <h2 className="card-title">Price: {price}</h2>
+                <h3 className="text-2xl">Available quantity: {availableQuantity}</h3>
+                <h2 className="text-xl">Quantity: {quantity}</h2>
+                <h2 className="text-lg">Per Unit Price: ${price}</h2>
                 <p>description: {description}</p>
                 <div className="card-actions">
                 <button onClick={() => handleToolDetails (_id)} className="btn btn-primary">Book Now</button>

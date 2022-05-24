@@ -30,7 +30,8 @@ const Purchase = () => {
     const handleBooking = event => {
         event.preventDefault();
 
-        
+        const quantity = event.target.quantity.value;
+        const purchaseQuantity = purchase.quantity;
         const purchases = {
             purchaseId: purchase._id,
             productName: purchase.name,
@@ -49,7 +50,13 @@ const Purchase = () => {
         })
         .then(res => res.json())
         .then(data => {
-            toast('Your Purchase successfully done')
+            if (purchaseQuantity > quantity) {
+                toast('You cannot book below quantity')
+            }
+           else{
+                toast('Your Purchase successfully done')
+           }
+           
         })
     }
     return (
@@ -65,9 +72,9 @@ const Purchase = () => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">Name: {purchase.name}</h2>
-                <h3 className="card-title">Available quantity: {purchase.availableQuantity}</h3>
-                <h2 className="card-title">Quantity: {purchase.quantity}</h2>
-                <h2 className="card-title">Price: {purchase.price}</h2>
+                <h3 className="text-2xl">Available quantity: {purchase.availableQuantity}</h3>
+                <h2 className="text-lg">Quantity: {purchase.quantity}</h2>
+                <h2 className="text-xl">Per Unit Price: ${purchase.price}</h2>
                 <p>description: {purchase.description}</p>
             </div>
         </div>
@@ -78,7 +85,7 @@ const Purchase = () => {
                 <input type="email" disabled  name="email" value={user?.email} class="input input-bordered w-full max-w-xs" /><br></br>
                 <input type="text" name="phone" placeholder="Phone Number" class="input input-bordered w-full max-w-xs" /><br></br>
                 <input type="text" placeholder="Quantity" name='quantity' class="input input-bordered w-full max-w-xs" /><br></br>
-                <input type="submit" value="Submit"  class="btn btn-primary input input-bordered w-full max-w-xs" />
+                <input type="submit" value="Book"  class="btn btn-primary input input-bordered w-full max-w-xs" />
                 </form>
            </div>
            </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BestSellerDetails = ({name, price}) => {
+const BestSellerDetails = ({name, price, img}) => {
     
     return (
         <div>
@@ -8,11 +8,11 @@ const BestSellerDetails = ({name, price}) => {
                 <div className="card-body text-center">
                 <div className="avatar flex justify-center">
                 <div className="w-24 rounded-full">
-                    <img src="https://i.ibb.co/DMrJs5d/tool1.webp" alt='' />
+                    <img src={img} alt='' />
                 </div>
                 </div>
                 <h2 >Name: {name}</h2>
-                <p>Price: {price}</p>
+                <p>Price: ${price}</p>
                 <div className='flex justify-center'>
                 <div className="rating">
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />

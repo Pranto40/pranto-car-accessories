@@ -30,7 +30,7 @@ const UserRow = ({user, refetch, index}) => {
     }
 
     const handleDelete = id => {
-        const proceed = window.confirm('Are you sure? This item delete');
+        const proceed = window.confirm('Are you sure? This admin delete');
         if(proceed) {
           const url = `https://desolate-journey-84026.herokuapp.com/user/admin/${id}`;
           fetch(url, {

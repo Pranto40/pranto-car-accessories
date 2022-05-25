@@ -19,7 +19,7 @@ const Dashboard = () => {
                 <div class="drawer-side">
                     <label for="dashbord-sidebar" class="drawer-overlay"></label> 
                     <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
-                    <li><NavLink to="/dashboard">My Orders</NavLink></li>
+                    {!admin && <li><NavLink to="/dashboard">My Orders</NavLink></li>}
                     {!admin && <li><NavLink to="/dashboard/addReview">Add Review</NavLink></li>}
                     <li><NavLink to="/dashboard/myProfile">My Profile</NavLink></li>
                     {admin && <li><NavLink to="/dashboard/users">All Users</NavLink></li>}

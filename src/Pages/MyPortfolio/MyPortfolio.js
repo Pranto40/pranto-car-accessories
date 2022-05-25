@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import portfolio from '../../accets/images/portfolio.jpg'
 const MyPortfolio = () => {
     return (

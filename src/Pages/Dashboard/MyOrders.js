@@ -26,7 +26,6 @@ const MyOrders = () => {
                 return res.json()
             })
             .then(data => {
-
                 setOrders(data)
             })
         }
@@ -45,7 +44,6 @@ const MyOrders = () => {
           })
         }
       }
-
     return (
         <div>
            <h1>My Orders: {orders.length}</h1>

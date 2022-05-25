@@ -17,6 +17,7 @@ import RequireAdmin from "./Pages/Login/RequireAdmin";
 import Payment from "./Pages/Dashboard/Payment";
 import AddProduct from "./Pages/Dashboard/AddProduct";
 import ManageProducts from "./Pages/Dashboard/ManageProducts";
+import Blog from "./Pages/Blog/Blog";
 
 
 
@@ -25,6 +26,7 @@ function App() {
     <Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}>Home</Route>
+        <Route path="/blog" element={<Blog />}>Home</Route>
         <Route path="/login" element={<Login />}>Home</Route>
         <Route path="/signUP" element={<SignUp />}>Home</Route>
         <Route path="/purchase/:id" element={

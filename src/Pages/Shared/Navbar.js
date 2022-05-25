@@ -17,7 +17,7 @@ const Navbar = ({children}) => {
 
     const menuItem = <>
     <li><NavLink className='rounded-lg' to="/">Home</NavLink></li>
-    <li><NavLink className='rounded-lg' to="/about">About</NavLink></li>
+    <li><NavLink className='rounded-lg' to="/blog">Blogs</NavLink></li>
     {
       user && <li><NavLink className='rounded-lg' to="/dashboard">Dashboard</NavLink></li>
     }

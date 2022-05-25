@@ -3,6 +3,7 @@ import Footer from '../Shared/Footer';
 import Banner from './Banner';
 import BestSeller from './BestSeller';
 import BusinessSummary from './BusinessSummary';
+import OurMember from './OurMember';
 import Reviews from './Reviews';
 import Tool from './Tool';
 
@@ -14,6 +15,7 @@ const Home = () => {
             <BestSeller />
             <BusinessSummary />
             <Reviews />
+            <OurMember />
             <Footer />
         </div>
     );

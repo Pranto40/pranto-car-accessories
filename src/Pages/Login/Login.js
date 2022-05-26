@@ -15,8 +15,6 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    // const [datileUser, datileUserLoading] = useAuthState(auth);
-
     const [
         signInWithEmailAndPassword,
         user,
@@ -25,8 +23,6 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [token] = useToken(user || googleUser)
-
-    // const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password)
@@ -44,13 +40,6 @@ const Login = () => {
     
     if (loading || googleLoading) {
         return <Loading />
-    }
-
-    const handlePasswordReset = async () => {
-        // if (!datileUser.email) {
-        //     await sendPasswordResetEmail(datileUser.email);
-        //     toast('Email Sent')
-        // }
     }
     
     return (
@@ -109,7 +98,6 @@ const Login = () => {
                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                     </label>
                     </div>
-                    <button onClick={handlePasswordReset} className="btn btn-link lowercase">forget password</button>
                     {loginError}
                     <input className='btn w-full text-white' value="Login" type="submit" />
                 </form>

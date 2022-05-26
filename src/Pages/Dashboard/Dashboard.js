@@ -21,6 +21,7 @@ const Dashboard = () => {
                     <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
                     {!admin && <li><NavLink to="/dashboard">My Orders</NavLink></li>}
                     {!admin && <li><NavLink to="/dashboard/addReview">Add Review</NavLink></li>}
+                    <li><NavLink to="/dashboard/addProfile">Add Profile</NavLink></li>
                     <li><NavLink to="/dashboard/myProfile">My Profile</NavLink></li>
                     {admin && <li><NavLink to="/dashboard/users">All Users</NavLink></li>}
                     {admin && <li><NavLink to="/dashboard/addProduct">Add Product</NavLink></li>}

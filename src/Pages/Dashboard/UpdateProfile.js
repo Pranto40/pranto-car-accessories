@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
-const UpdateProfile = () => {
+const UpdateProfile = (id) => {
     const [user] = useAuthState(auth);
     const handleProfile = event => {
         event.preventDefault();
@@ -12,7 +12,7 @@ const UpdateProfile = () => {
             phoneNumber: event.target.phoneNumber.value,
             hobbies: event.target.hobbies.value,
         }
-        fetch(`https://desolate-journey-84026.herokuapp.com/${user.email}`, {
+        fetch(`https://desolate-journey-84026.herokuapp.com/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'

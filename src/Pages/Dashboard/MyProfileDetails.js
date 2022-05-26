@@ -2,7 +2,6 @@ import React from 'react';
 import UpdateProfile from './UpdateProfile';
 
 const MyProfileDetails = ({profile}) => {
-    console.log(profile);
     return (
         <div className='ml-5 flex justify-center items-center'>
             <div className='border rounded-md w-auto p-5'>

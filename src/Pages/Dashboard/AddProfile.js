@@ -20,7 +20,7 @@ const AddProfile = () => {
             phoneNumber: event.target.phoneNumber.value,
             hobbies: event.target.hobbies.value,
         }
-        fetch('http://localhost:5000/profile', {
+        fetch('https://desolate-journey-84026.herokuapp.com/profile', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -53,7 +53,6 @@ const AddProfile = () => {
             <input required type="text" name="hobbies" placeholder="Your Hobbies" class="my-5 input input-bordered w-full max-w-xs" /><br />
             <input type="submit" value="Add A Profile"  class="btn btn-primary input input-bordered w-full max-w-xs" />
             </form>
-            <MyProfile />
         </div>
     );
 };

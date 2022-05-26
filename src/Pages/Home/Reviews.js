@@ -3,7 +3,7 @@ import Loading from '../Shared/Loading';
 import ReviewsDetails from '../Home/ReviewsDetails'
 
 const Reviews = () => {
-    const url = `http://localhost:5000/review`
+    const url = `https://desolate-journey-84026.herokuapp.com/review`
 
     const [isLoading, setIsLoading] = useState(true);
     const [review, setReview] = useState([])

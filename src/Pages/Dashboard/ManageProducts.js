@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure? This Item delete');
         if(proceed) {
-          const url = `http://localhost:5000/tools/${id}`;
+          const url = `https://desolate-journey-84026.herokuapp.com/tools/${id}`;
           fetch(url, {
             method: 'DELETE',
           })

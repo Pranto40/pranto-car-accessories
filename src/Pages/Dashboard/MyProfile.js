@@ -3,7 +3,7 @@ import Loading from '../Shared/Loading';
 import MyProfileDetails from './MyProfileDetails';
 
 const MyProfile = () => {
-    const url = `http://localhost:5000/profile`;
+    const url = `https://desolate-journey-84026.herokuapp.com/profile`;
     const [isLoading, setIsLoading] = useState(true);
     const [profiles, setProfiles] = useState([]);
     const fetchData = async (url) => {

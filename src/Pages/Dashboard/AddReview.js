@@ -18,7 +18,7 @@ const AddReview = () => {
             rating: event.target.rating.value,
             comment: event.target.comment.value,
         }
-        fetch('http://localhost:5000/review', {
+        fetch('https://desolate-journey-84026.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -37,8 +37,8 @@ const AddReview = () => {
                 <h1 className="text-2xl">Add A Review</h1>
             <input type="text" disabled value={user?.displayName} class="mt-5 input input-bordered w-full max-w-xs" /> <br />
             <input type="text" disabled  name="email" value={user?.email} class="input input-bordered my-5 w-full max-w-xs" /><br />
-            <input type="number" name="rating" placeholder="Ratings" class="input input-bordered w-full max-w-xs" /><br />
-            <textarea name="comment" class="textarea textarea-bordered w-80 px-5 my-5" placeholder="Comment"></textarea><br />
+            <input required type="number" name="rating" placeholder="Ratings" class="input input-bordered w-full max-w-xs" /><br />
+            <textarea required name="comment" class="textarea textarea-bordered w-80 px-5 my-5" placeholder="Comment"></textarea><br />
             <input type="submit" value="Add A Review"  class="btn btn-primary input input-bordered w-full max-w-xs" />
             </form>
         </div>

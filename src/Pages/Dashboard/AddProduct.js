@@ -19,7 +19,7 @@ const AddProduct = () => {
             price: event.target.price.value,
             description: event.target.description.value,
         }
-        fetch('http://localhost:5000/tools', {
+        fetch('https://desolate-journey-84026.herokuapp.com/tools', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

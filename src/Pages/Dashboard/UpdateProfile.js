@@ -12,7 +12,7 @@ const UpdateProfile = () => {
             phoneNumber: event.target.phoneNumber.value,
             hobbies: event.target.hobbies.value,
         }
-        fetch(`http://localhost:5000/profile/${user.email}`, {
+        fetch(`https://desolate-journey-84026.herokuapp.com/${user.email}`, {
             method: 'PUT',
             headers: {
                 'Content-type': 'application/json'

@@ -35,14 +35,14 @@ const AddProduct = () => {
         <div className='ml-12 mt-12'>
             <form onSubmit={handleProduct}>
                 <h1 className="text-2xl">Add Product</h1>
-            <input type="text" disabled  name="email" value={user?.email} class="input input-bordered my-5 w-full max-w-xs" /><br />
-            <input type="text" name="name" placeholder="Product Name" class="input input-bordered w-full max-w-xs" /><br />
-            <input type="number" name="availableQuantity" placeholder="Available Quantity" class="my-5 input input-bordered w-full max-w-xs" /><br />
-            <input type="number" name="quantity" placeholder="Quantity" class="input input-bordered w-full max-w-xs" /><br />
-            <input type="number" name="price" placeholder="price" class="my-5 input input-bordered w-full max-w-xs" /><br />
-            <input type="text" name="description" placeholder="description" class="my-5 input input-bordered w-full max-w-xs" /><br />
-            <input type="text" name="image" placeholder="Image Link" class="my-5 input input-bordered w-full max-w-xs" /><br />
-            <input type="submit" value="Add A Profile"  class="btn btn-primary input input-bordered w-full max-w-xs" />
+            <input type="text" disabled  name="email" value={user?.email} className="input input-bordered my-5 w-full max-w-xs" /><br />
+            <input type="text" name="name" placeholder="Product Name" className="input input-bordered w-full max-w-xs" /><br />
+            <input type="number" name="availableQuantity" placeholder="Available Quantity" className="my-5 input input-bordered w-full max-w-xs" /><br />
+            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered w-full max-w-xs" /><br />
+            <input type="number" name="price" placeholder="price" className="my-5 input input-bordered w-full max-w-xs" /><br />
+            <input type="text" name="description" placeholder="description" className="my-5 input input-bordered w-full max-w-xs" /><br />
+            <input type="text" name="image" placeholder="Image Link" className="my-5 input input-bordered w-full max-w-xs" /><br />
+            <input type="submit" value="Add A Profile"  className="btn btn-primary input input-bordered w-full max-w-xs" />
             </form>
         </div>
     );

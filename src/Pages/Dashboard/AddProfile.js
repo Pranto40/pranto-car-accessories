@@ -2,7 +2,6 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
-import MyProfile from './MyProfile';
 
 const AddProfile = () => {
     const [user, loading] = useAuthState(auth);
@@ -45,13 +44,13 @@ const AddProfile = () => {
         <div className='ml-12 mt-12'>
             <form onSubmit={handleProfile}>
                 <h1 className="text-2xl">My Profile Added</h1>
-            <input type="text" disabled value={user?.displayName} class="mt-5 input input-bordered w-full max-w-xs" /> <br />
-            <input type="text" disabled  name="email" value={user?.email} class="input input-bordered my-5 w-full max-w-xs" /><br />
-            <input required type="text" name="education" placeholder="Education" class="input input-bordered w-full max-w-xs" /><br />
-            <input required type="text" name="location" placeholder="Location" class="my-5 input input-bordered w-full max-w-xs" /><br />
-            <input required type="number" name="phoneNumber" placeholder="Phone Number" class="input input-bordered w-full max-w-xs" /><br />
-            <input required type="text" name="hobbies" placeholder="Your Hobbies" class="my-5 input input-bordered w-full max-w-xs" /><br />
-            <input type="submit" value="Add A Profile"  class="btn btn-primary input input-bordered w-full max-w-xs" />
+            <input type="text" disabled value={user?.displayName} className="mt-5 input input-bordered w-full max-w-xs" /> <br />
+            <input type="text" disabled  name="email" value={user?.email} className="input input-bordered my-5 w-full max-w-xs" /><br />
+            <input required type="text" name="education" placeholder="Education" className="input input-bordered w-full max-w-xs" /><br />
+            <input required type="text" name="location" placeholder="Location" className="my-5 input input-bordered w-full max-w-xs" /><br />
+            <input required type="number" name="phoneNumber" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" /><br />
+            <input required type="text" name="hobbies" placeholder="Your Hobbies" className="my-5 input input-bordered w-full max-w-xs" /><br />
+            <input type="submit" value="Add A Profile"  className="btn btn-primary input input-bordered w-full max-w-xs" />
             </form>
         </div>
     );

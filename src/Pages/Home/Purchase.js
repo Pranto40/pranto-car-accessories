@@ -25,7 +25,7 @@ const Purchase = () => {
     }
     useEffect ( () => {
         fetchData(url)
-    } , [])
+    } , [url])
 
     const handleBooking = event => {
         event.preventDefault();
@@ -81,11 +81,11 @@ const Purchase = () => {
            <div className='w-80'>
                <h1 className='text-center text-2xl font-bold mb-3'>Purchase</h1>
                 <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3'>
-                <input type="text" name="name" disabled value={user?.displayName} class="input input-bordered w-full max-w-xs" /><br></br>
-                <input type="email" disabled  name="email" value={user?.email} class="input input-bordered w-full max-w-xs" /><br></br>
-                <input type="text" name="phone" placeholder="Phone Number" class="input input-bordered w-full max-w-xs" /><br></br>
-                <input type="text" placeholder="Quantity" name='quantity' class="input input-bordered w-full max-w-xs" /><br></br>
-                <input type="submit" value="Book"  class="btn btn-primary input input-bordered w-full max-w-xs" />
+                <input type="text" name="name" disabled value={user?.displayName} className="input input-bordered w-full max-w-xs" /><br></br>
+                <input type="email" disabled  name="email" value={user?.email} className="input input-bordered w-full max-w-xs" /><br></br>
+                <input type="text" name="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" /><br></br>
+                <input type="text" placeholder="Quantity" name='quantity' className="input input-bordered w-full max-w-xs" /><br></br>
+                <input type="submit" value="Book"  className="btn btn-primary input input-bordered w-full max-w-xs" />
                 </form>
            </div>
            </div>

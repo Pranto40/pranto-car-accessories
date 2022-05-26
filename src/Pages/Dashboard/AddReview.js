@@ -35,11 +35,11 @@ const AddReview = () => {
         <div className='ml-12 mt-12'>
             <form onSubmit={handleReview}>
                 <h1 className="text-2xl">Add A Review</h1>
-            <input type="text" disabled value={user?.displayName} class="mt-5 input input-bordered w-full max-w-xs" /> <br />
-            <input type="text" disabled  name="email" value={user?.email} class="input input-bordered my-5 w-full max-w-xs" /><br />
-            <input required type="number" name="rating" placeholder="Ratings" class="input input-bordered w-full max-w-xs" /><br />
-            <textarea required name="comment" class="textarea textarea-bordered w-80 px-5 my-5" placeholder="Comment"></textarea><br />
-            <input type="submit" value="Add A Review"  class="btn btn-primary input input-bordered w-full max-w-xs" />
+            <input type="text" disabled value={user?.displayName} className="mt-5 input input-bordered w-full max-w-xs" /> <br />
+            <input type="text" disabled  name="email" value={user?.email} className="input input-bordered my-5 w-full max-w-xs" /><br />
+            <input required type="number" name="rating" placeholder="Ratings" className="input input-bordered w-full max-w-xs" /><br />
+            <textarea required name="comment" className="textarea textarea-bordered w-80 px-5 my-5" placeholder="Comment"></textarea><br />
+            <input type="submit" value="Add A Review"  className="btn btn-primary input input-bordered w-full max-w-xs" />
             </form>
         </div>
     );

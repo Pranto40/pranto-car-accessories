@@ -11,7 +11,7 @@ const MyProfileDetails = ({profile}) => {
             <h1 className='text-xl'>Location: {profile.location}</h1>
             <h1 className='text-lg my-2'>Phone Number: {profile.phoneNumber}</h1>
             <h1 className='text-jg my-2'>Your Hobby: {profile.hobbies}</h1>
-            <label for="UpdateProfile" class="btn modal-button w-80 mt-2">Update Profile</label>
+            <label for="UpdateProfile" className="btn modal-button w-80 mt-2">Update Profile</label>
             <UpdateProfile id={profile._id} />
             </div>
         </div>

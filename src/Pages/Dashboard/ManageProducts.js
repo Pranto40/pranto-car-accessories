@@ -31,8 +31,8 @@ const ManageProducts = () => {
     return (
         <div className="">
             <h1 className="text-2xl">Manage Products</h1>
-            <div class="overflow-x-auto">
-            <table class="table w-full">
+            <div className="overflow-x-auto">
+            <table className="table w-full">
                 <thead>
                 <tr>
                     <th></th>
@@ -47,15 +47,15 @@ const ManageProducts = () => {
                     {
                         manageProducts.map((manageProduct, index) => <tr>
                             <th>{index + 1}</th>
-                            <td><div class="avatar">
-                            <div class="w-20 rounded">
+                            <td><div className="avatar">
+                            <div className="w-20 rounded">
                                 <img src={manageProduct.image} alt={manageProduct.name} />
                             </div>
                             </div></td>
                             <td>{manageProduct.name}</td>
                             <td>{manageProduct.quantity}</td>
                             <td>{manageProduct.price}</td>
-                            <td><button onClick={() =>handleDelete (manageProduct._id)} class="btn btn-sm">Remove Item</button></td>
+                            <td><button onClick={() =>handleDelete (manageProduct._id)} className="btn btn-sm">Remove Item</button></td>
                         </tr>)
                     }
                 
